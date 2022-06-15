@@ -65,7 +65,7 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
     private func gifFetchedSuccessfully(gifArray: TrendingGIFModelList) {
         self.limit = 20
         self.offset += 1
-        loadingState = gifArray.count > 0 ? .completed : .loading
+        loadingState = gifArray.count == 0 ? .completed : .loading
         self.loadMoreData = gifArray.count > 0
         self.trendingGifDataSource?.append(contentsOf: gifArray)
     }

@@ -26,6 +26,7 @@ class GiffyListViewController: UIViewController {
         configureCollectionViewItemSize()
         viewModel.fetchTrendingGifsFromServer()
         addViewModelObservers()
+        title = "Giffy"
     }
     
     private func configureCollecitonView() {
