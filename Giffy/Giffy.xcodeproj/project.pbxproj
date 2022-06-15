@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9536D282859DCB500823BEA /* GiifyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D262859DCB500823BEA /* GiifyCollectionViewCell.swift */; };
+		B9536D292859DCB500823BEA /* GiifyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9536D272859DCB500823BEA /* GiifyCollectionViewCell.xib */; };
 		B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3B22859CBD600F91C18 /* AppDelegate.swift */; };
 		B995D3B52859CBD600F91C18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3B42859CBD600F91C18 /* SceneDelegate.swift */; };
 		B995D3BA2859CBD600F91C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B995D3B82859CBD600F91C18 /* Main.storyboard */; };
@@ -20,6 +22,10 @@
 		B995D3EC2859CC4C00F91C18 /* GiffyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3E92859CC4C00F91C18 /* GiffyListViewController.swift */; };
 		B995D3F42859CC9E00F91C18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3F22859CC9E00F91C18 /* Coordinator.swift */; };
 		B995D3F82859CD2B00F91C18 /* UIView+NibRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3F72859CD2B00F91C18 /* UIView+NibRepresentable.swift */; };
+		B995D3FF2859D4A400F91C18 /* LoadingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B995D3FC2859D4A300F91C18 /* LoadingCollectionCell.xib */; };
+		B995D4002859D4A400F91C18 /* LoadingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3FD2859D4A300F91C18 /* LoadingItem.swift */; };
+		B995D4012859D4A400F91C18 /* LoadingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3FE2859D4A300F91C18 /* LoadingCollectionCell.swift */; };
+		B995D4032859D5EF00F91C18 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D4022859D5EF00F91C18 /* UICollectionView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9536D262859DCB500823BEA /* GiifyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiifyCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9536D272859DCB500823BEA /* GiifyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiifyCollectionViewCell.xib; sourceTree = "<group>"; };
 		B995D3AF2859CBD600F91C18 /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B995D3B22859CBD600F91C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B995D3B42859CBD600F91C18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 		B995D3E92859CC4C00F91C18 /* GiffyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiffyListViewController.swift; sourceTree = "<group>"; };
 		B995D3F22859CC9E00F91C18 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B995D3F72859CD2B00F91C18 /* UIView+NibRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibRepresentable.swift"; sourceTree = "<group>"; };
+		B995D3FC2859D4A300F91C18 /* LoadingCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCollectionCell.xib; sourceTree = "<group>"; };
+		B995D3FD2859D4A300F91C18 /* LoadingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingItem.swift; sourceTree = "<group>"; };
+		B995D3FE2859D4A300F91C18 /* LoadingCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCollectionCell.swift; sourceTree = "<group>"; };
+		B995D4022859D5EF00F91C18 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B995D3E22859CBF200F91C18 /* Application */,
+				B995D3F92859D47000F91C18 /* Cells */,
 				B995D3E32859CC4C00F91C18 /* Controller */,
 				B995D3ED2859CC9E00F91C18 /* Shared */,
 				B995D3B82859CBD600F91C18 /* Main.storyboard */,
@@ -206,9 +219,38 @@
 		B995D3F62859CD0500F91C18 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B995D4022859D5EF00F91C18 /* UICollectionView+Extension.swift */,
 				B995D3F72859CD2B00F91C18 /* UIView+NibRepresentable.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B995D3F92859D47000F91C18 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B995D3FB2859D4A300F91C18 /* Loading */,
+				B995D3FA2859D47D00F91C18 /* GiifyCollectionCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B995D3FA2859D47D00F91C18 /* GiifyCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9536D262859DCB500823BEA /* GiifyCollectionViewCell.swift */,
+				B9536D272859DCB500823BEA /* GiifyCollectionViewCell.xib */,
+			);
+			path = GiifyCollectionCell;
+			sourceTree = "<group>";
+		};
+		B995D3FB2859D4A300F91C18 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				B995D3FC2859D4A300F91C18 /* LoadingCollectionCell.xib */,
+				B995D3FD2859D4A300F91C18 /* LoadingItem.swift */,
+				B995D3FE2859D4A300F91C18 /* LoadingCollectionCell.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +357,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B995D3FF2859D4A400F91C18 /* LoadingCollectionCell.xib in Resources */,
 				B995D3BF2859CBD700F91C18 /* LaunchScreen.storyboard in Resources */,
 				B995D3BC2859CBD700F91C18 /* Assets.xcassets in Resources */,
+				B9536D292859DCB500823BEA /* GiifyCollectionViewCell.xib in Resources */,
 				B995D3BA2859CBD600F91C18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,10 +387,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B995D3EC2859CC4C00F91C18 /* GiffyListViewController.swift in Sources */,
+				B995D4002859D4A400F91C18 /* LoadingItem.swift in Sources */,
 				B995D3F82859CD2B00F91C18 /* UIView+NibRepresentable.swift in Sources */,
 				B995D3EA2859CC4C00F91C18 /* GiffyListViewModel.swift in Sources */,
 				B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */,
+				B995D4012859D4A400F91C18 /* LoadingCollectionCell.swift in Sources */,
 				B995D3B52859CBD600F91C18 /* SceneDelegate.swift in Sources */,
+				B995D4032859D5EF00F91C18 /* UICollectionView+Extension.swift in Sources */,
+				B9536D282859DCB500823BEA /* GiifyCollectionViewCell.swift in Sources */,
 				B995D3EB2859CC4C00F91C18 /* GiffyListViewCoordinator.swift in Sources */,
 				B995D3F42859CC9E00F91C18 /* Coordinator.swift in Sources */,
 			);
