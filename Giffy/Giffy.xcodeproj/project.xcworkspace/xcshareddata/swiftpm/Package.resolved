@@ -11,11 +11,11 @@
         }
       },
       {
-        "package": "SDWebImage",
-        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "package": "SwiftyGif",
+        "repositoryURL": "https://github.com/kirualex/SwiftyGif.git",
         "state": {
           "branch": "master",
-          "revision": "eeb25d6e9c1ecedbcbdc6694a6e40eaa8dcddbb5",
+          "revision": "887fff305f088838eb685c8da9548c1508551e7a",
           "version": null
         }
       }

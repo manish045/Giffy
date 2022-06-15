@@ -19,8 +19,8 @@
 		B9536D442859F51100823BEA /* TrendingGifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D432859F51100823BEA /* TrendingGifModel.swift */; };
 		B9536D47285A727600823BEA /* GiffyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D45285A727600823BEA /* GiffyCollectionViewCell.swift */; };
 		B9536D48285A727600823BEA /* GiffyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9536D46285A727600823BEA /* GiffyCollectionViewCell.xib */; };
-		B9536D4B285A759000823BEA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B9536D4A285A759000823BEA /* SDWebImage */; };
 		B9536D4E285A75E200823BEA /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D4D285A75E200823BEA /* UIImageView+ImageLoader.swift */; };
+		B9536D56285A7FC100823BEA /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = B9536D55285A7FC100823BEA /* SwiftyGif */; };
 		B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3B22859CBD600F91C18 /* AppDelegate.swift */; };
 		B995D3B52859CBD600F91C18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3B42859CBD600F91C18 /* SceneDelegate.swift */; };
 		B995D3BA2859CBD600F91C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B995D3B82859CBD600F91C18 /* Main.storyboard */; };
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9536D4B285A759000823BEA /* SDWebImage in Frameworks */,
+				B9536D56285A7FC100823BEA /* SwiftyGif in Frameworks */,
 				B9536D3C2859E7FC00823BEA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +345,7 @@
 			name = Giffy;
 			packageProductDependencies = (
 				B9536D3B2859E7FC00823BEA /* Alamofire */,
-				B9536D4A285A759000823BEA /* SDWebImage */,
+				B9536D55285A7FC100823BEA /* SwiftyGif */,
 			);
 			productName = Giffy;
 			productReference = B995D3AF2859CBD600F91C18 /* Giffy.app */;
@@ -421,7 +421,7 @@
 			mainGroup = B995D3A62859CBD600F91C18;
 			packageReferences = (
 				B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */,
-				B9536D49285A759000823BEA /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				B9536D54285A7FC100823BEA /* XCRemoteSwiftPackageReference "SwiftyGif" */,
 			);
 			productRefGroup = B995D3B02859CBD600F91C18 /* Products */;
 			projectDirPath = "";
@@ -836,9 +836,9 @@
 				version = 4.9.1;
 			};
 		};
-		B9536D49285A759000823BEA /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		B9536D54285A7FC100823BEA /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -852,10 +852,10 @@
 			package = B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		B9536D4A285A759000823BEA /* SDWebImage */ = {
+		B9536D55285A7FC100823BEA /* SwiftyGif */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B9536D49285A759000823BEA /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
+			package = B9536D54285A7FC100823BEA /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

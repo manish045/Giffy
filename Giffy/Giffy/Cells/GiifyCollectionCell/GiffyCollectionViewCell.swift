@@ -22,8 +22,8 @@ class GiffyCollectionViewCell: UICollectionViewCell {
             guard let model = model else {
                 return
             }
-
             gifImageView.downloadImage(from: model.images.downsized.url, placeholderImage: nil)
+
             gifNameLabel.text = model.title
         }
     }
