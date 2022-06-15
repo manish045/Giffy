@@ -23,14 +23,26 @@ class GiffyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollecitonView()
+        configureCollectionViewItemSize()
         viewModel.fetchTrendingGifsFromServer()
         addViewModelObservers()
     }
     
     private func configureCollecitonView() {
         self.collectionView.registerNibCell(ofType: LoadingCollectionCell.self)
-        self.collectionView.registerNibCell(ofType: GiifyCollectionViewCell.self)
+        self.collectionView.registerNibCell(ofType: GiffyCollectionViewCell.self)
         self.collectionView.dataSource = self
+    }
+    
+    private func configureCollectionViewItemSize() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical //this is for direction
+        layout.minimumInteritemSpacing = 0 // this is for spacing between cells
+        
+        let width = (self.collectionView.frame.size.width) //some width
+        let height = 64.0
+        layout.itemSize = CGSize(width: width, height: height) //this is for cell size
+        self.collectionView.collectionViewLayout = layout
     }
     
     private func addViewModelObservers() {
@@ -76,7 +88,7 @@ extension GiffyListViewController: UICollectionViewDataSource {
         
         switch Section(rawValue: indexPath.section) {
         case .gif:
-            let cell = collectionView.dequeueCell(GiifyCollectionViewCell.self, indexPath: indexPath)
+            let cell = collectionView.dequeueCell(GiffyCollectionViewCell.self, indexPath: indexPath)
             let model = self.viewModel.trendingGifDataSource?[indexPath.row]
             cell.model = model
             return cell
@@ -88,4 +100,3 @@ extension GiffyListViewController: UICollectionViewDataSource {
         }
     }
 }
-
