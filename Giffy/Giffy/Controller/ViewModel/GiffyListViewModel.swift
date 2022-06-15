@@ -10,6 +10,7 @@ import Combine
 
 protocol GiffyListViewModelInput {
     func fetchTrendingGifsFromServer()
+    func loadMoreGifs()
 }
 
 protocol GiffyListViewModelOutput {
@@ -32,7 +33,7 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
     private var coordinator: GiffyListViewCoordinatorInput
     private var apiService: GifAPIRepositoryView
     
-    private var limit = 25
+    private var limit = 20
     private var offset = 0
     private var loadMoreData = true
     
@@ -42,9 +43,13 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
         self.apiService = apiService
     }
     
+    func loadMoreGifs() {
+        if !loadMoreData {return}
+        fetchTrendingGifsFromServer()
+    }
+    
     /// Fetching gif's from server
     func fetchTrendingGifsFromServer() {
-        if !loadMoreData {return}
         self.loadMoreData = false
         
         apiService.fetchTrendingGifs(limit: limit, offset: offset) { [weak self] (result: APIResult<TrendingGIFModelList, APIError>) in
@@ -63,7 +68,7 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
     /// Increase offset and change limit once data has been fetched successfully
     ///
     private func gifFetchedSuccessfully(gifArray: TrendingGIFModelList) {
-        self.limit = 20
+        self.limit = 25
         self.offset += 1
         loadingState = gifArray.count == 0 ? .completed : .loading
         self.loadMoreData = gifArray.count > 0

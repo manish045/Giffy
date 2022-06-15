@@ -33,6 +33,7 @@ class GiffyListViewController: UIViewController {
         self.collectionView.registerNibCell(ofType: LoadingCollectionCell.self)
         self.collectionView.registerNibCell(ofType: GiffyCollectionViewCell.self)
         self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
     
     private func configureCollectionViewItemSize() {
@@ -98,6 +99,22 @@ extension GiffyListViewController: UICollectionViewDataSource {
             let loadingCell = collectionView.dequeueCell(LoadingCollectionCell.self, indexPath: indexPath)
             loadingCell.configure(data: .init(state: self.viewModel.loadingState))
             return loadingCell
+        }
+    }
+}
+
+extension GiffyListViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        switch Section(rawValue: indexPath.section) {
+        case .gif:
+            if indexPath.row == (self.viewModel.trendingGifDataSource?.count ?? 0) - 8 {
+                self.viewModel.loadMoreGifs()
+            }
+            
+        default:
+            break
         }
     }
 }
