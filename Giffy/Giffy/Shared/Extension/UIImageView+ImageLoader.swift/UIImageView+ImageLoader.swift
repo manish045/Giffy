@@ -1,8 +1,8 @@
 //
 //  UIImageView+ImageLoader.swift
-//  MarvelComics
+//  Giffy
 //
-//  Created by Manish Tamta on 21/05/2022.
+//  Created by Manish Tamta on 16/06/2022.
 //
 
 import UIKit
