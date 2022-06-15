@@ -1,6 +1,6 @@
 //
 //    UICollectionView+Extension.swift
-//  Marvel Comics
+//  Giffy
 //
 //  Created by Manish Tamta on 19/05/2022.
 //

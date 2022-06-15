@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		B9536D282859DCB500823BEA /* GiifyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D262859DCB500823BEA /* GiifyCollectionViewCell.swift */; };
 		B9536D292859DCB500823BEA /* GiifyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9536D272859DCB500823BEA /* GiifyCollectionViewCell.xib */; };
+		B9536D322859E26200823BEA /* APIGifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2B2859E26200823BEA /* APIGifyService.swift */; };
+		B9536D332859E26200823BEA /* GiffyServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2C2859E26200823BEA /* GiffyServiceUtil.swift */; };
+		B9536D342859E26200823BEA /* APIService+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2D2859E26200823BEA /* APIService+URL.swift */; };
+		B9536D352859E26200823BEA /* BaseModel+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2F2859E26200823BEA /* BaseModel+Helper.swift */; };
+		B9536D362859E26200823BEA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D302859E26200823BEA /* BaseModel.swift */; };
+		B9536D372859E26200823BEA /* APIService+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D312859E26200823BEA /* APIService+Helper.swift */; };
+		B9536D392859E59700823BEA /* GiffyPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9536D382859E59700823BEA /* GiffyPlist.plist */; };
+		B9536D3C2859E7FC00823BEA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B9536D3B2859E7FC00823BEA /* Alamofire */; };
 		B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3B22859CBD600F91C18 /* AppDelegate.swift */; };
 		B995D3B52859CBD600F91C18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3B42859CBD600F91C18 /* SceneDelegate.swift */; };
 		B995D3BA2859CBD600F91C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B995D3B82859CBD600F91C18 /* Main.storyboard */; };
@@ -48,6 +56,13 @@
 /* Begin PBXFileReference section */
 		B9536D262859DCB500823BEA /* GiifyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiifyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9536D272859DCB500823BEA /* GiifyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiifyCollectionViewCell.xib; sourceTree = "<group>"; };
+		B9536D2B2859E26200823BEA /* APIGifyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGifyService.swift; sourceTree = "<group>"; };
+		B9536D2C2859E26200823BEA /* GiffyServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiffyServiceUtil.swift; sourceTree = "<group>"; };
+		B9536D2D2859E26200823BEA /* APIService+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIService+URL.swift"; sourceTree = "<group>"; };
+		B9536D2F2859E26200823BEA /* BaseModel+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseModel+Helper.swift"; sourceTree = "<group>"; };
+		B9536D302859E26200823BEA /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		B9536D312859E26200823BEA /* APIService+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIService+Helper.swift"; sourceTree = "<group>"; };
+		B9536D382859E59700823BEA /* GiffyPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GiffyPlist.plist; sourceTree = "<group>"; };
 		B995D3AF2859CBD600F91C18 /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B995D3B22859CBD600F91C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B995D3B42859CBD600F91C18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9536D3C2859E7FC00823BEA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +112,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9536D2A2859E26200823BEA /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				B9536D2B2859E26200823BEA /* APIGifyService.swift */,
+				B9536D2C2859E26200823BEA /* GiffyServiceUtil.swift */,
+				B9536D2D2859E26200823BEA /* APIService+URL.swift */,
+				B9536D2E2859E26200823BEA /* BaseModel */,
+				B9536D312859E26200823BEA /* APIService+Helper.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		B9536D2E2859E26200823BEA /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9536D2F2859E26200823BEA /* BaseModel+Helper.swift */,
+				B9536D302859E26200823BEA /* BaseModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		B995D3A62859CBD600F91C18 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +231,8 @@
 		B995D3ED2859CC9E00F91C18 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B9536D382859E59700823BEA /* GiffyPlist.plist */,
+				B9536D2A2859E26200823BEA /* WebService */,
 				B995D3F52859CD0500F91C18 /* Extension */,
 				B995D3F12859CC9E00F91C18 /* Protocols */,
 			);
@@ -269,6 +308,9 @@
 			dependencies = (
 			);
 			name = Giffy;
+			packageProductDependencies = (
+				B9536D3B2859E7FC00823BEA /* Alamofire */,
+			);
 			productName = Giffy;
 			productReference = B995D3AF2859CBD600F91C18 /* Giffy.app */;
 			productType = "com.apple.product-type.application";
@@ -341,6 +383,9 @@
 				Base,
 			);
 			mainGroup = B995D3A62859CBD600F91C18;
+			packageReferences = (
+				B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B995D3B02859CBD600F91C18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +406,7 @@
 				B995D3BF2859CBD700F91C18 /* LaunchScreen.storyboard in Resources */,
 				B995D3BC2859CBD700F91C18 /* Assets.xcassets in Resources */,
 				B9536D292859DCB500823BEA /* GiifyCollectionViewCell.xib in Resources */,
+				B9536D392859E59700823BEA /* GiffyPlist.plist in Resources */,
 				B995D3BA2859CBD600F91C18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,14 +435,20 @@
 				B995D3EC2859CC4C00F91C18 /* GiffyListViewController.swift in Sources */,
 				B995D4002859D4A400F91C18 /* LoadingItem.swift in Sources */,
 				B995D3F82859CD2B00F91C18 /* UIView+NibRepresentable.swift in Sources */,
+				B9536D322859E26200823BEA /* APIGifyService.swift in Sources */,
 				B995D3EA2859CC4C00F91C18 /* GiffyListViewModel.swift in Sources */,
 				B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */,
+				B9536D362859E26200823BEA /* BaseModel.swift in Sources */,
 				B995D4012859D4A400F91C18 /* LoadingCollectionCell.swift in Sources */,
 				B995D3B52859CBD600F91C18 /* SceneDelegate.swift in Sources */,
 				B995D4032859D5EF00F91C18 /* UICollectionView+Extension.swift in Sources */,
+				B9536D352859E26200823BEA /* BaseModel+Helper.swift in Sources */,
+				B9536D372859E26200823BEA /* APIService+Helper.swift in Sources */,
 				B9536D282859DCB500823BEA /* GiifyCollectionViewCell.swift in Sources */,
 				B995D3EB2859CC4C00F91C18 /* GiffyListViewCoordinator.swift in Sources */,
 				B995D3F42859CC9E00F91C18 /* Coordinator.swift in Sources */,
+				B9536D342859E26200823BEA /* APIService+URL.swift in Sources */,
+				B9536D332859E26200823BEA /* GiffyServiceUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +786,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9536D3B2859E7FC00823BEA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B995D3A72859CBD600F91C18 /* Project object */;
 }
