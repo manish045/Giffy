@@ -10,7 +10,7 @@ import CryptoKit
 
 
 enum KeyString: String {
-    case apikey
+    case apikey = "api_key"
 }
 
 

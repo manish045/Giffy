@@ -23,6 +23,7 @@ protocol PerformRequest {
 class APIGiffyService: SessionManager, PerformRequest {
     
     var network: Network
+    static var shared = APIGiffyService()
 
     init(network: Network = Network()) {
         self.network = network

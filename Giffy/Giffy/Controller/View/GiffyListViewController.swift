@@ -20,6 +20,7 @@ class GiffyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollecitonView()
+        viewModel.fetchTrendingGifsFromServer()
     }
     
     private func configureCollecitonView() {
