@@ -10,8 +10,10 @@ import Foundation
 import Foundation
 
 // MARK: - TrendingGIFModel
+
+typealias TrendingGIFModelList = [TrendingGIFModel]
 struct ResponseModel: BaseModel {
-    let data: [TrendingGIFModel]
+    let data: TrendingGIFModelList?
 }
 
 // MARK: - Datum
