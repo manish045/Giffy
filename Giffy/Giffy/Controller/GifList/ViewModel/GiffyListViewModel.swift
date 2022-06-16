@@ -11,6 +11,7 @@ import Combine
 protocol GiffyListViewModelInput {
     func fetchTrendingGifsFromServer()
     func loadMoreGifs()
+    func showGifDetail(model: TrendingGIFModel)
 }
 
 protocol GiffyListViewModelOutput {
@@ -73,5 +74,10 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
         loadingState = gifArray.count == 0 ? .completed : .loading
         self.loadMoreData = gifArray.count > 0
         self.trendingGifDataSource?.append(contentsOf: gifArray)
+    }
+    
+    
+    func showGifDetail(model: TrendingGIFModel) {
+        self.coordinator.showGifDetail(model: model)
     }
 }

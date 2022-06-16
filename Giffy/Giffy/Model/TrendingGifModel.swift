@@ -19,20 +19,19 @@ struct ResponseModel: BaseModel {
 // MARK: - Datum
 struct TrendingGIFModel: BaseModel {
     var id: String
-    var source : String
-    //var gifUrl: URL
-    var title: String
-    var rating : String
-    var images : Images
-    
-    
-    struct Images : Codable{
-        var downsized : Downsized
-        
-        struct Downsized : Codable{
-            var width : String
-            var height: String
-            var url : String
-        }
-    }
+    var source : String?
+    var title: String?
+    var rating : String?
+    var images : Images?
+    let username: String?
+}
+
+struct Images : BaseModel{
+    var downsized : Downsized?
+}
+
+struct Downsized : BaseModel{
+    var width : String?
+    var height: String?
+    var url : String?
 }
