@@ -117,4 +117,15 @@ extension GiffyListViewController: UICollectionViewDelegate {
             break
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch Section(rawValue: indexPath.section) {
+        case .gif:
+            if let model = self.viewModel.trendingGifDataSource?[indexPath.row] {
+                viewModel.showGifDetail(model: model)
+            }
+        default:
+            break
+        }
+    }
 }

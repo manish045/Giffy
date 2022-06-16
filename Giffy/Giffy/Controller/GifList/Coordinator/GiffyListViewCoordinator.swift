@@ -8,7 +8,7 @@
 import UIKit
 
 protocol GiffyListViewCoordinatorInput {
-    
+    func showGifDetail(model: TrendingGIFModel)
 }
 
 class GiffyListViewCoordinator: Coordinator, GiffyListViewCoordinatorInput {
@@ -34,4 +34,8 @@ class GiffyListViewCoordinator: Coordinator, GiffyListViewCoordinatorInput {
         rootController = presentingController
     }
     
+    func showGifDetail(model: TrendingGIFModel) {
+        let vc = GifDetailViewCoordinator().makeModule(model: model)
+        rootController?.navigationController?.pushViewController(vc, animated: true)
+    }
 }

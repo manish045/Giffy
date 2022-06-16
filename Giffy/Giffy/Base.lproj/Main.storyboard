@@ -45,6 +45,40 @@
             </objects>
             <point key="canvasLocation" x="20" y="84"/>
         </scene>
+        <!--Gif Detail View Controller-->
+        <scene sceneID="yp0-Qc-GDJ">
+            <objects>
+                <viewController storyboardIdentifier="GifDetailViewController" id="83L-9p-7au" customClass="GifDetailViewController" customModule="Giffy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GF9-4l-lYB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="elA-Vw-kv7">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="khj-8l-Rdz" customClass="FLAnimatedImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="798"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qNs-Gd-2bR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qNs-Gd-2bR" firstAttribute="trailing" secondItem="elA-Vw-kv7" secondAttribute="trailing" id="905-he-2XF"/>
+                            <constraint firstItem="elA-Vw-kv7" firstAttribute="top" secondItem="qNs-Gd-2bR" secondAttribute="top" constant="20" id="PDi-8a-scc"/>
+                            <constraint firstItem="qNs-Gd-2bR" firstAttribute="bottom" secondItem="elA-Vw-kv7" secondAttribute="bottom" id="qBs-PD-jjR"/>
+                            <constraint firstItem="elA-Vw-kv7" firstAttribute="leading" secondItem="qNs-Gd-2bR" secondAttribute="leading" id="qHF-Pw-VrV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gifImageView" destination="khj-8l-Rdz" id="b3u-up-w1J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpt-1J-fuX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="84"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

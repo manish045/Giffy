@@ -40,6 +40,9 @@
 		B995D4002859D4A400F91C18 /* LoadingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3FD2859D4A300F91C18 /* LoadingItem.swift */; };
 		B995D4012859D4A400F91C18 /* LoadingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3FE2859D4A300F91C18 /* LoadingCollectionCell.swift */; };
 		B995D4032859D5EF00F91C18 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D4022859D5EF00F91C18 /* UICollectionView+Extension.swift */; };
+		B9F5A4E8285BC0550001F117 /* GifDetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4E7285BC0550001F117 /* GifDetailViewCoordinator.swift */; };
+		B9F5A4EA285BC0C00001F117 /* GifDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4E9285BC0C00001F117 /* GifDetailViewController.swift */; };
+		B9F5A4EC285BC0D50001F117 /* GifDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4EB285BC0D50001F117 /* GifDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		B995D3FD2859D4A300F91C18 /* LoadingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingItem.swift; sourceTree = "<group>"; };
 		B995D3FE2859D4A300F91C18 /* LoadingCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCollectionCell.swift; sourceTree = "<group>"; };
 		B995D4022859D5EF00F91C18 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		B9F5A4E7285BC0550001F117 /* GifDetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewCoordinator.swift; sourceTree = "<group>"; };
+		B9F5A4E9285BC0C00001F117 /* GifDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewController.swift; sourceTree = "<group>"; };
+		B9F5A4EB285BC0D50001F117 /* GifDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,9 +242,8 @@
 		B995D3E32859CC4C00F91C18 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B995D3E42859CC4C00F91C18 /* ViewModel */,
-				B995D3E62859CC4C00F91C18 /* Coordinator */,
-				B995D3E82859CC4C00F91C18 /* View */,
+				B9F5A4E2285BC0040001F117 /* GifList */,
+				B9F5A4E3285BC0100001F117 /* GifDetail */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +335,50 @@
 				B995D3FE2859D4A300F91C18 /* LoadingCollectionCell.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		B9F5A4E2285BC0040001F117 /* GifList */ = {
+			isa = PBXGroup;
+			children = (
+				B995D3E62859CC4C00F91C18 /* Coordinator */,
+				B995D3E42859CC4C00F91C18 /* ViewModel */,
+				B995D3E82859CC4C00F91C18 /* View */,
+			);
+			path = GifList;
+			sourceTree = "<group>";
+		};
+		B9F5A4E3285BC0100001F117 /* GifDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5A4E6285BC0270001F117 /* Coordinator */,
+				B9F5A4E5285BC0220001F117 /* ViewModel */,
+				B9F5A4E4285BC0190001F117 /* View */,
+			);
+			path = GifDetail;
+			sourceTree = "<group>";
+		};
+		B9F5A4E4285BC0190001F117 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5A4E9285BC0C00001F117 /* GifDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9F5A4E5285BC0220001F117 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5A4EB285BC0D50001F117 /* GifDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9F5A4E6285BC0270001F117 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5A4E7285BC0550001F117 /* GifDetailViewCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +533,8 @@
 				B995D3EA2859CC4C00F91C18 /* GiffyListViewModel.swift in Sources */,
 				B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */,
 				B9536D362859E26200823BEA /* BaseModel.swift in Sources */,
+				B9F5A4EC285BC0D50001F117 /* GifDetailViewModel.swift in Sources */,
+				B9F5A4EA285BC0C00001F117 /* GifDetailViewController.swift in Sources */,
 				B995D4012859D4A400F91C18 /* LoadingCollectionCell.swift in Sources */,
 				B9536D4E285A75E200823BEA /* UIImageView+ImageLoader.swift in Sources */,
 				B995D3B52859CBD600F91C18 /* SceneDelegate.swift in Sources */,
@@ -497,6 +548,7 @@
 				B9536D342859E26200823BEA /* APIService+URL.swift in Sources */,
 				B9536D442859F51100823BEA /* TrendingGifModel.swift in Sources */,
 				B9536D332859E26200823BEA /* GiffyServiceUtil.swift in Sources */,
+				B9F5A4E8285BC0550001F117 /* GifDetailViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
