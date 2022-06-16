@@ -28,7 +28,6 @@
 		B995D3BA2859CBD600F91C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B995D3B82859CBD600F91C18 /* Main.storyboard */; };
 		B995D3BC2859CBD700F91C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B995D3BB2859CBD700F91C18 /* Assets.xcassets */; };
 		B995D3BF2859CBD700F91C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B995D3BD2859CBD700F91C18 /* LaunchScreen.storyboard */; };
-		B995D3CA2859CBD700F91C18 /* GiffyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3C92859CBD700F91C18 /* GiffyTests.swift */; };
 		B995D3D42859CBD700F91C18 /* GiffyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3D32859CBD700F91C18 /* GiffyUITests.swift */; };
 		B995D3D62859CBD700F91C18 /* GiffyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3D52859CBD700F91C18 /* GiffyUITestsLaunchTests.swift */; };
 		B995D3EA2859CC4C00F91C18 /* GiffyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B995D3E52859CC4C00F91C18 /* GiffyListViewModel.swift */; };
@@ -43,6 +42,7 @@
 		B9F5A4E8285BC0550001F117 /* GifDetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4E7285BC0550001F117 /* GifDetailViewCoordinator.swift */; };
 		B9F5A4EA285BC0C00001F117 /* GifDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4E9285BC0C00001F117 /* GifDetailViewController.swift */; };
 		B9F5A4EC285BC0D50001F117 /* GifDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4EB285BC0D50001F117 /* GifDetailViewModel.swift */; };
+		B9F5A4EF285BDAF60001F117 /* GIffyListXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4EE285BDAF60001F117 /* GIffyListXCTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,6 @@
 		B995D3BE2859CBD700F91C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B995D3C02859CBD700F91C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B995D3C52859CBD700F91C18 /* GiffyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiffyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B995D3C92859CBD700F91C18 /* GiffyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiffyTests.swift; sourceTree = "<group>"; };
 		B995D3CF2859CBD700F91C18 /* GiffyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiffyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B995D3D32859CBD700F91C18 /* GiffyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiffyUITests.swift; sourceTree = "<group>"; };
 		B995D3D52859CBD700F91C18 /* GiffyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiffyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		B9F5A4E7285BC0550001F117 /* GifDetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewCoordinator.swift; sourceTree = "<group>"; };
 		B9F5A4E9285BC0C00001F117 /* GifDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewController.swift; sourceTree = "<group>"; };
 		B9F5A4EB285BC0D50001F117 /* GifDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewModel.swift; sourceTree = "<group>"; };
+		B9F5A4EE285BDAF60001F117 /* GIffyListXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIffyListXCTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +215,7 @@
 		B995D3C82859CBD700F91C18 /* GiffyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B995D3C92859CBD700F91C18 /* GiffyTests.swift */,
+				B9F5A4ED285BDAD00001F117 /* GifList */,
 			);
 			path = GiffyTests;
 			sourceTree = "<group>";
@@ -381,6 +381,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		B9F5A4ED285BDAD00001F117 /* GifList */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5A4EE285BDAF60001F117 /* GIffyListXCTest.swift */,
+			);
+			path = GifList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +465,7 @@
 					};
 					B995D3C42859CBD700F91C18 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = B995D3AE2859CBD600F91C18;
 					};
 					B995D3CE2859CBD700F91C18 = {
@@ -556,7 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B995D3CA2859CBD700F91C18 /* GiffyTests.swift in Sources */,
+				B9F5A4EF285BDAF60001F117 /* GIffyListXCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,14 +788,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = UITestSampleIdentifier.GiffyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Giffy.app/Giffy";
@@ -798,10 +814,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = UITestSampleIdentifier.GiffyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
