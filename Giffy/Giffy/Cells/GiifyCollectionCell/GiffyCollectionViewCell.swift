@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import FLAnimatedImage
 
 class GiffyCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var gifImageView: FLAnimatedImageView!
+    @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var gifNameLabel: UILabel!
     
     override func awakeFromNib() {
