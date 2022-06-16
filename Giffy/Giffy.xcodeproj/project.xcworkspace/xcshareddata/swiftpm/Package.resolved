@@ -11,6 +11,33 @@
         }
       },
       {
+        "package": "FLAnimatedImage",
+        "repositoryURL": "https://github.com/Flipboard/FLAnimatedImage.git",
+        "state": {
+          "branch": null,
+          "revision": "e7f9fd4681ae41bf6f3056db08af4f401d61da52",
+          "version": "1.0.16"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "b729cc14f65e1412efc781a4cc46bd7f4720a3ae",
+          "version": "5.12.6"
+        }
+      },
+      {
+        "package": "SDWebImageFLPlugin",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageFLPlugin.git",
+        "state": {
+          "branch": null,
+          "revision": "40ea0e7c28189fcae5f03e5bc9acf2771ea0b224",
+          "version": "0.6.0"
+        }
+      },
+      {
         "package": "SwiftyGif",
         "repositoryURL": "https://github.com/kirualex/SwiftyGif.git",
         "state": {

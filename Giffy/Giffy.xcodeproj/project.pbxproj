@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B948BE32285B275800CA311E /* SDWebImageFLPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = B948BE31285B275800CA311E /* SDWebImageFLPlugin */; };
 		B9536D322859E26200823BEA /* APIGifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2B2859E26200823BEA /* APIGifyService.swift */; };
 		B9536D332859E26200823BEA /* GiffyServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2C2859E26200823BEA /* GiffyServiceUtil.swift */; };
 		B9536D342859E26200823BEA /* APIService+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9536D2D2859E26200823BEA /* APIService+URL.swift */; };
@@ -100,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B948BE32285B275800CA311E /* SDWebImageFLPlugin in Frameworks */,
 				B9536D56285A7FC100823BEA /* SwiftyGif in Frameworks */,
 				B9536D3C2859E7FC00823BEA /* Alamofire in Frameworks */,
 			);
@@ -349,6 +351,7 @@
 			packageProductDependencies = (
 				B9536D3B2859E7FC00823BEA /* Alamofire */,
 				B9536D55285A7FC100823BEA /* SwiftyGif */,
+				B948BE31285B275800CA311E /* SDWebImageFLPlugin */,
 			);
 			productName = Giffy;
 			productReference = B995D3AF2859CBD600F91C18 /* Giffy.app */;
@@ -425,6 +428,7 @@
 			packageReferences = (
 				B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B9536D54285A7FC100823BEA /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+				B948BE30285B275800CA311E /* XCRemoteSwiftPackageReference "SDWebImageFLPlugin" */,
 			);
 			productRefGroup = B995D3B02859CBD600F91C18 /* Products */;
 			projectDirPath = "";
@@ -832,6 +836,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B948BE30285B275800CA311E /* XCRemoteSwiftPackageReference "SDWebImageFLPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageFLPlugin.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.6.0;
+			};
+		};
 		B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -851,6 +863,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B948BE31285B275800CA311E /* SDWebImageFLPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B948BE30285B275800CA311E /* XCRemoteSwiftPackageReference "SDWebImageFLPlugin" */;
+			productName = SDWebImageFLPlugin;
+		};
 		B9536D3B2859E7FC00823BEA /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9536D3A2859E7FC00823BEA /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -23,21 +23,21 @@ extension FLAnimatedImageView {
         if let transformedUrl = URL(string: originalUrlString) {
             
             sd_internalSetImage(with: transformedUrl, placeholderImage: placeholderImage, options: SDWebImageOptions(rawValue: 0), context: nil, setImageBlock: { [weak self] (image, imageData, _, _)  in
-                guard let strongSelf = self else { return }
+                guard let self = self else { return }
                 
                 let imageFormat = NSData.sd_imageFormat(forImageData: imageData)
                 if imageFormat == .GIF {
                     DispatchQueue.global(qos: .userInteractive).async { [weak self] in
                         let animatedImage = FLAnimatedImage(animatedGIFData: imageData)
                         DispatchQueue.main.async { [weak self] in
-                            guard let strongSelf = self else { return }
-                            strongSelf.animatedImage = animatedImage
-                            strongSelf.image = nil
+                            guard let self = self else { return }
+                            self.animatedImage = animatedImage
+                            self.image = nil
                         }
                     }
                 } else {
-                    strongSelf.image = image
-                    strongSelf.animatedImage = nil
+                    self.image = image
+                    self.animatedImage = nil
                 }
                 }, progress: nil, completed: nil)
         }
