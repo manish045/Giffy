@@ -10,6 +10,7 @@ import Combine
 
 class GiffyListViewController: UIViewController {
     
+    // MARK: Register all the sections you need in CollectionView
     enum Section: Int, CaseIterable {
         case gif
         case loader
@@ -23,12 +24,34 @@ class GiffyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollecitonView()
-        configureCollectionViewItemSize()
         viewModel.fetchTrendingGifsFromServer()
         addViewModelObservers()
         title = "Giffy"
     }
     
+    // MARK: Set collectionview flowlayout Size on rotaion
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout, let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, windowScene.activationState == .foregroundActive else { return }
+
+        switch windowScene.interfaceOrientation {
+        case .portrait, .portraitUpsideDown:
+            configureCollectionViewItemSize(height: 64.0)
+            
+        case .landscapeLeft, .landscapeRight:
+            configureCollectionViewItemSize(height: 104.0)
+
+        default:
+            break
+        }
+
+         flowLayout.invalidateLayout()
+    }
+    
+    
+    
+    // MARK: Configure collection View Cell, datasource and delegate
     private func configureCollecitonView() {
         self.collectionView.registerNibCell(ofType: LoadingCollectionCell.self)
         self.collectionView.registerNibCell(ofType: GiffyCollectionViewCell.self)
@@ -36,17 +59,18 @@ class GiffyListViewController: UIViewController {
         self.collectionView.delegate = self
     }
     
-    private func configureCollectionViewItemSize() {
+    // MARK: Set CollectionViewLayout
+    private func configureCollectionViewItemSize(height: CGFloat) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical //this is for direction
         layout.minimumInteritemSpacing = 0 // this is for spacing between cells
         
         let width = (self.collectionView.frame.size.width) //some width
-        let height = 64.0
         layout.itemSize = CGSize(width: width, height: height) //this is for cell size
         self.collectionView.collectionViewLayout = layout
     }
     
+    //MARK: Register Binders
     private func addViewModelObservers() {
         viewModel.loadDataSource
             .receive(on: RunLoop.main)

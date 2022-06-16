@@ -76,7 +76,7 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
         self.trendingGifDataSource?.append(contentsOf: gifArray)
     }
     
-    
+    /// Push to gif detail screen
     func showGifDetail(model: TrendingGIFModel) {
         self.coordinator.showGifDetail(model: model)
     }
