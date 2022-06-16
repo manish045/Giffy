@@ -48,9 +48,7 @@ class GiffyListViewController: UIViewController {
 
          flowLayout.invalidateLayout()
     }
-    
-    
-    
+        
     // MARK: Configure collection View Cell, datasource and delegate
     private func configureCollecitonView() {
         self.collectionView.registerNibCell(ofType: LoadingCollectionCell.self)
