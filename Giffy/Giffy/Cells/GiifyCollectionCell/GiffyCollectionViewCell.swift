@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import FLAnimatedImage
 
 class GiffyCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var gifImageView: FLAnimatedImageView!
     @IBOutlet weak var gifNameLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,7 +24,6 @@ class GiffyCollectionViewCell: UICollectionViewCell {
                 return
             }
             gifImageView.downloadImage(from: model.images.downsized.url, placeholderImage: nil)
-
             gifNameLabel.text = model.title
         }
     }
