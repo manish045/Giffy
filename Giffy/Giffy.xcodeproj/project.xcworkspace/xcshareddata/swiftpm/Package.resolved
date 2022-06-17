@@ -20,6 +20,24 @@
         }
       },
       {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "fd48276f88f3d55dbdcdc9e8cbf32541811d5865",
+          "version": "12.1.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "f7ab017ac93178c3df274248ca37e224e624e619",
+          "version": null
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {
@@ -35,15 +53,6 @@
           "branch": null,
           "revision": "40ea0e7c28189fcae5f03e5bc9acf2771ea0b224",
           "version": "0.6.0"
-        }
-      },
-      {
-        "package": "SwiftyGif",
-        "repositoryURL": "https://github.com/kirualex/SwiftyGif.git",
-        "state": {
-          "branch": "master",
-          "revision": "887fff305f088838eb685c8da9548c1508551e7a",
-          "version": null
         }
       }
     ]
