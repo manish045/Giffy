@@ -26,7 +26,8 @@ class GiffyListViewController: UIViewController {
         configureCollecitonView()
         viewModel.fetchTrendingGifsFromServer()
         addViewModelObservers()
-        title = "Giffy"
+        configureCollectionViewItemSize(height: 64.0)
+        title = Ln10.GiffyListViewController.title
     }
     
     // MARK: Set collectionview flowlayout Size on rotaion
@@ -48,9 +49,7 @@ class GiffyListViewController: UIViewController {
 
          flowLayout.invalidateLayout()
     }
-    
-    
-    
+        
     // MARK: Configure collection View Cell, datasource and delegate
     private func configureCollecitonView() {
         self.collectionView.registerNibCell(ofType: LoadingCollectionCell.self)
@@ -122,6 +121,9 @@ extension GiffyListViewController: UICollectionViewDataSource {
         default:
             let loadingCell = collectionView.dequeueCell(LoadingCollectionCell.self, indexPath: indexPath)
             loadingCell.configure(data: .init(state: self.viewModel.loadingState))
+            loadingCell.retryIntent = { [weak self] in
+                self?.viewModel.fetchTrendingGifsFromServer()
+            }
             return loadingCell
         }
     }
