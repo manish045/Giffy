@@ -41,15 +41,14 @@
 		B9F5A4E8285BC0550001F117 /* GifDetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4E7285BC0550001F117 /* GifDetailViewCoordinator.swift */; };
 		B9F5A4EA285BC0C00001F117 /* GifDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4E9285BC0C00001F117 /* GifDetailViewController.swift */; };
 		B9F5A4EC285BC0D50001F117 /* GifDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4EB285BC0D50001F117 /* GifDetailViewModel.swift */; };
-		B9F5A4EF285BDAF60001F117 /* GIffyListXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4EE285BDAF60001F117 /* GIffyListXCTest.swift */; };
 		B9F5A4F5285C5D370001F117 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B9F5A4F4285C5D370001F117 /* RealmSwift */; };
 		B9F5A4F7285C63110001F117 /* TrendingGifStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4F6285C63110001F117 /* TrendingGifStorage.swift */; };
-		B9F5A4FB285C7EB50001F117 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4FA285C7EB50001F117 /* DatabaseManager.swift */; };
-		B9F5A50028602C100001F117 /* APIFetchGifsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A4FF28602C100001F117 /* APIFetchGifsTest.swift */; };
-		B9F5A504286035E60001F117 /* GifListViewModelXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A503286035E60001F117 /* GifListViewModelXCTest.swift */; };
-		B9F5A50628603A860001F117 /* gifSample.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F5A50528603A860001F117 /* gifSample.json */; };
-		B9F5A509286047AE0001F117 /* GiffyDetailControllerXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A508286047AE0001F117 /* GiffyDetailControllerXCTest.swift */; };
-		B9F5A50B286049340001F117 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A50A286049340001F117 /* Constants.swift */; };
+		B9F5A51428604BF10001F117 /* APIFetchGifsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A50D28604BF10001F117 /* APIFetchGifsTest.swift */; };
+		B9F5A51528604BF10001F117 /* gifSample.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F5A50E28604BF10001F117 /* gifSample.json */; };
+		B9F5A51628604BF10001F117 /* GifListViewModelXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A51028604BF10001F117 /* GifListViewModelXCTest.swift */; };
+		B9F5A51728604BF10001F117 /* GIffyListXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A51128604BF10001F117 /* GIffyListXCTest.swift */; };
+		B9F5A51828604BF10001F117 /* GiffyDetailControllerXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A51328604BF10001F117 /* GiffyDetailControllerXCTest.swift */; };
+		B9F5A51A28604BFB0001F117 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F5A51928604BFB0001F117 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,10 +228,10 @@
 		B995D3C82859CBD700F91C18 /* GiffyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9F5A50528603A860001F117 /* gifSample.json */,
-				B9F5A4FC28602BBB0001F117 /* MockFetchGifsService */,
-				B9F5A4ED285BDAD00001F117 /* GifList */,
-				B9F5A507286047840001F117 /* GiffyDetail */,
+				B9F5A51228604BF10001F117 /* GiffyDetail */,
+				B9F5A50F28604BF10001F117 /* GifList */,
+				B9F5A50E28604BF10001F117 /* gifSample.json */,
+				B9F5A50C28604BF10001F117 /* MockFetchGifsService */,
 			);
 			path = GiffyTests;
 			sourceTree = "<group>";
@@ -292,12 +291,12 @@
 		B995D3ED2859CC9E00F91C18 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B9F5A51928604BFB0001F117 /* Constants.swift */,
 				B9F5A4F9285C7EB50001F117 /* DatabaseManager */,
 				B995D3F52859CD0500F91C18 /* Extension */,
 				B995D3F12859CC9E00F91C18 /* Protocols */,
 				B9536D2A2859E26200823BEA /* WebService */,
 				B9536D382859E59700823BEA /* GiffyPlist.plist */,
-				B9F5A50A286049340001F117 /* Constants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -596,6 +595,7 @@
 				B9536D322859E26200823BEA /* APIGifyService.swift in Sources */,
 				B995D3EA2859CC4C00F91C18 /* GiffyListViewModel.swift in Sources */,
 				B995D3B32859CBD600F91C18 /* AppDelegate.swift in Sources */,
+				B9F5A51A28604BFB0001F117 /* Constants.swift in Sources */,
 				B9536D362859E26200823BEA /* BaseModel.swift in Sources */,
 				B9F5A4EC285BC0D50001F117 /* GifDetailViewModel.swift in Sources */,
 				B9F5A4EA285BC0C00001F117 /* GifDetailViewController.swift in Sources */,
