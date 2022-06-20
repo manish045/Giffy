@@ -97,6 +97,7 @@ final class GiffyListViewModel: DefaultGiffyListViewModel {
     }
     
     private func fetchSavedData(apiError: APIError) {
+        self.error.send(apiError)
         manager.fetchTrendingList { [weak self] result in
             switch result {
             case .success(let model):
