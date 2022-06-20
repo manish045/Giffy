@@ -23,7 +23,8 @@ struct GifAPIRepository: GifAPIRepositoryView {
         APIGiffyService.shared.performRequest(endPoint: .trending, parameters: parameters) { (result: APIResult<ResponseModel, APIError>) in
             switch result {
             case .success(let model):
-                completion(.success(model.data ?? []))
+                let data = model.data ?? []
+                completion(.success(data))
             case .error(let error):
                 completion(.error(error))
             }

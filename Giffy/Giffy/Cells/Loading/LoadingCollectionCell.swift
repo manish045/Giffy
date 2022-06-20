@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 public class LoadingCollectionCell: UICollectionViewCell {
     
@@ -16,7 +15,7 @@ public class LoadingCollectionCell: UICollectionViewCell {
     
     private var data: LoadingItem? = nil
     
-    var retryIntent: PassthroughSubject<LoadingItem, Never>?
+    var retryIntent: (()->Void)?
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,12 +49,11 @@ public class LoadingCollectionCell: UICollectionViewCell {
     }
     
     private func retryTapped(for item: LoadingItem) {
-        
-        guard let intent = retryIntent else {
+        guard let retryIntent = retryIntent else {
             return
         }
-        
-        intent.send(item)
+        configure(data: .init(state: .loading))
+        retryIntent()
     }
     
 }

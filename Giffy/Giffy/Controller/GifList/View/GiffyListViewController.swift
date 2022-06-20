@@ -26,7 +26,8 @@ class GiffyListViewController: UIViewController {
         configureCollecitonView()
         viewModel.fetchTrendingGifsFromServer()
         addViewModelObservers()
-        title = "Giffy"
+        configureCollectionViewItemSize(height: 64.0)
+        title = Ln10.GiffyListViewController.title
     }
     
     // MARK: Set collectionview flowlayout Size on rotaion
@@ -120,6 +121,9 @@ extension GiffyListViewController: UICollectionViewDataSource {
         default:
             let loadingCell = collectionView.dequeueCell(LoadingCollectionCell.self, indexPath: indexPath)
             loadingCell.configure(data: .init(state: self.viewModel.loadingState))
+            loadingCell.retryIntent = { [weak self] in
+                self?.viewModel.fetchTrendingGifsFromServer()
+            }
             return loadingCell
         }
     }

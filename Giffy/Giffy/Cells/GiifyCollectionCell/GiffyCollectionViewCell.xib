@@ -23,6 +23,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8Lc-32-L3l" secondAttribute="height" multiplier="1:1" id="8J7-uV-7aG"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="84" id="HPo-c3-NdQ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="84" id="lNP-7T-DMg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQq-DW-q0c">
