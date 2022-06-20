@@ -81,8 +81,9 @@ class GiffyListViewController: UIViewController {
         
         viewModel.error
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] _ in
+            .sink(receiveValue: { [weak self] error in
                 guard let self = self else {return}
+                self.showAlert(title: error.asString)
                 self.collectionView.reloadData()
             })
             .store(in: &disposeBag)

@@ -56,3 +56,14 @@ protocol ViewControllerRepresentable: AnyObject {
     var view: UIView! { get }
 }
 extension UIViewController: ViewControllerRepresentable {}
+
+
+extension UIViewController {
+
+    func showAlert(title: String) {
+        let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+}
